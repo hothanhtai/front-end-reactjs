@@ -1,0 +1,62 @@
+{
+    "home-header":{
+        "speciality": "Medical Specialty",
+        "searchdoctor" : "Find a doctor by specialty",
+        "health-facility" : "Health facilities",
+        "choose-hospital" : "Choose hospital clinic",
+        "doctor" : "Doctor",
+        "gooddoctor" : "Choose a good doctor",
+        "checkup-package" : "Checkup package",
+        "general-check": "General health check",
+        "support" : "Support",
+        "medical-background" : "MEDICAL BACKGROUND",
+        "comprehensive-care" : "COMPREHENSIVE HEALTH CARE",
+        "examination" : "Examination",
+        "specialist" : "Specialist",
+        "remote-examination" : "Remote",
+        "general" : "General",
+        "analysis" : "Analysis",
+        "medicine" : "Medicine",
+        "health" : "Health",
+        "spirit" : "Spirit",
+        "dentistry" : "Dentistry",
+        "package" : "Package",
+        "surgery" : "Surgery",
+        "product" : "Product",
+        "medical" : "Medical",
+        "test" : "Test",
+        "find-a-medical" : "Find a medical specialty",
+        "welcome" : "Welcome"
+    },
+    "menu": {
+        "admin" : {
+            "manage-user" : "User System",
+            "manage-doctor" : "Manage doctors",
+            "manage-admin" : "Manage admins",
+            "crud" : "CRUD User",
+            "crud-redux" : "CRUD Redux",
+            "clinic" : "Clinics",
+            "manage-clinic" : "Manage clinics",
+            "specialty" : "Specialty",
+            "manage-specialty" : "Manage specialty",
+            "handbook" : "Handbook",
+            "manage-handbook" : "Manage handbook"
+
+        }
+    },
+    "manage-user" : {
+        "title" : "Manage user with redux",
+        "add" : "Add new user with Redux",
+        "password" : "Password",
+        "firstname" : "First Name",
+        "lastname" : "Last Name",
+        "phone" : "Phone Number",
+        "address" : "Address",
+        "gender" : "Gender",
+        "position" : "Position",
+        "role" : "Role",
+        "image" : "Avatar",
+        "save" : "Save"
+    }
+    
+}

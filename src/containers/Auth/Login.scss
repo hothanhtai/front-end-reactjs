@@ -1,0 +1,105 @@
+.login-background {
+    background-image: url("https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+    .login-container{
+        width: 400px;   
+        height: auto;
+        margin: 0 auto ;
+        background-color: aliceblue;
+        border-radius: 10px;
+        transform: translateY(100px);
+        
+        
+    }
+
+    .login-content{
+        padding: 15px;
+        .text-login{
+            text-align: center;
+            font-weight: 600;
+            font-size: 24px;
+            padding-top: 10px;
+        }
+
+        .login-input{
+            .hide{
+                display: none;
+            }
+            margin: 7px 0;
+            .eye-group{
+                position: relative;
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    cursor: pointer;
+                    font-size: 17px;
+                }
+
+               
+            }
+        }
+        .btn-login button{
+            width: 100%;
+            border-radius: 30px;
+            margin: 10px 0;
+            height: 40px;
+            color: aliceblue;
+            font-weight: bolder;
+            border: none;
+            outline: none;
+            background: #a64bf4;
+            background: -webkit-linear-gradient(right,#fc00ff,#0cd7da,#fc00ff);
+            // background: -o-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+            // background: -moz-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+            // background: linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+           transition: all .7s ease-in-out;
+
+        }
+
+        .btn-login button:hover{
+            background: #a64bf4;
+            background: -webkit-linear-gradient(right,#00dadee1,#fb00ffcf,#00dbde);
+        
+        }
+
+        .social-login{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+        .social-login .google{
+            display: flex;
+            font-size: 30px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%  ;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: aliceblue;
+        }
+        .social-login .facebook{
+            display: flex;
+            font-size: 30px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%  ;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(5, 124, 188);
+            color: aliceblue;
+        }
+
+        .social-login .github{
+            font-size:50px;
+        }
+    }
+
+
+}

@@ -1,0 +1,214 @@
+.slick-next {
+    right: -6px !important;
+    background-color: #45c3d2 !important;
+    border-radius: 50%;
+    top: 160px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.slick-prev {
+    z-index: 1;
+    left: -13px !important;
+    background-color: #45c3d2 !important;
+    border-radius: 50%;
+    top: 160px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+
+.section-search{
+   
+    &.section-specialty{
+        background-color: #f5f5f5;
+
+    }
+
+    &.section-outstanding-doctor{
+        background-color: #f5f5f5;
+       
+    }
+
+    &.section-about{
+       .row{
+        .social-channel{
+            ul{
+                list-style: none;
+                li{
+                    display: inline-block;
+                    height: 50px;
+                    min-width: 50px;
+                    background: #fff;
+                    border-radius: 5px;
+                    .img-social-channel{
+                        background-image: url('https://bookingcare.vn/assets/truyenthong/vtv1.png');
+                        width: 162px;
+                        height: 50px;
+                        background-size: 142px 30px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin-right: 3px;
+
+                    }
+                }        
+        
+            }
+        }
+       }
+    }
+
+    &.home-footer{
+        height: 450px !important;
+    }
+
+    &.footer-end{
+        height: 100px;
+        background-color: #64b9e5;
+        padding: 10px;
+        
+    }
+
+    .section-body{
+        margin-top: 10px;
+        .section-customize{
+            padding-top: 45px;
+            
+            width: 335px !important;
+            
+            &.section-customize-outstanding-doctor{
+                box-shadow: rgba(100, 100, 111, 0.3) 3px 7px 29px 3px;
+                padding-top: 96px;
+
+            }
+
+            .img-customize{
+                height: 190px;
+                width: 306px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: #fff;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                &.specialty{
+                    background-image: url('../../assets/specialty/120331-co-xuong-khop.jpg');
+                }
+
+                &.medical-facility{
+                    background-image: url('../../assets/medicalfacility/091211-logo-dong-do.jpg');
+                }
+
+                &.outstanding-doctor{
+                    background-image: url('../../assets/doctor/104016-bs-nga.jpg');
+                    width: 120px;
+                    height: 120px;
+                    // margin: 0 auto;
+                    border-radius: 50%;
+                }
+
+                &.handbook{
+                    background-image: url('../../assets/handbooks/224354-cach-dieu0tri-mun-boc.png');
+                }
+            }
+          
+        }
+    }
+}
+
+.section-search{
+    height: 400px;
+   
+    .section-container{
+        margin: 0px 100px;
+        display: flex;
+        flex-direction: column;
+
+        .section-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+
+            .section-title{
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .section-btn{
+                border: none;
+                outline: none;
+                padding: 15px;
+                border-radius: 5px;
+                font-weight: 700;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    background-color: #45c3d2;
+                }
+            }
+        }
+
+        
+    }
+   
+}
+
+.section-customize {
+    .outer-bg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       margin-bottom: 10px;
+    }
+}
+
+
+.home-footer{
+    background: #efefef;
+    padding: 30px 0;
+    .container{
+        background: #efefef;
+        .row{
+            .footer-col2{
+                ul{
+                    list-style: none;
+                    line-height: 40px;
+
+                    li{
+                        transition: all .2s ease-in;
+                        &:hover{
+                            transform: translateX(5px);
+                        }
+                        a{
+                            text-decoration: none !important;
+                            color: #45c3d2 !important;
+                           
+                        }
+
+                    }
+                }
+            }
+
+            .app-download{
+                a{
+                    text-decoration: none !important;
+                    color: #45c3d2 !important;
+                }
+            }
+
+           
+        }
+    }
+
+}
+.social{
+    text-align: right;
+    a{
+        img{
+            width: 32px !important;
+            margin: 10px 10px 10px 0 !important;
+        }
+    }
+  
+}

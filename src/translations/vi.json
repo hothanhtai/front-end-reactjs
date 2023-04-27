@@ -1,0 +1,65 @@
+{
+    "home-header":{
+        "speciality": "Chuyên khoa",
+        "searchdoctor" : "Tìm bác sĩ theo chuyên khoa",
+        "health-facility" : "Cơ sở y tế",
+        "choose-hospital" : "Chọn bệnh viện phòng khám",
+        "doctor" : "Bác sĩ",
+        "gooddoctor" : "Chọn bác sĩ giỏi",
+        "checkup-package" : "Gói khám",
+        "general-check": "Khám sức khỏe tổng quát",
+        "support" : "Hỗ trợ",
+        "medical-background" : "NỀN TẢNG Y TẾ",
+        "comprehensive-care" : "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "examination" : "Khám",
+        "specialist" : "Chuyên khoa",
+        "remote-examination" : "Từ xa",
+        "general" : "Tổng quát",
+        "analysis" : "Xét nghiệm",
+        "medicine" : "Y học",
+        "health" : "Sức khỏe",
+        "spirit" : "Tinh thần",
+        "dentistry" : "Nha khoa",
+        "package" : "Gói",
+        "surgery" : "Phẫu thuật",
+        "product" : "Sản phẩm",
+        "medical" : "Y tế",
+        "test" : "Bài test",
+        "find-a-medical" : "Tìm chuyên khoa khám bệnh",
+        "welcome" : "Xin chào"
+    },
+    "menu": {
+       
+        "admin" : {
+            "manage-user" : "Người dùng",
+            "manage-doctor" : "Quản lý bác sĩ",
+            "manage-admin" : "Quản lý admin",
+            "crud" : "CRUD User",
+            "crud-redux" : "CRUD Redux",
+            "clinic" : "Phòng khám",
+            "manage-clinic" : "Quản lý phòng khám",
+            "specialty" : "Chuyên khoa",
+            "manage-specialty" : "Quản lý chuyên khoa",
+            "handbook" : "Cẩm nang",
+            "manage-handbook" : "Quản lý cẩm nang"
+
+        }
+    },
+
+    "manage-user" : {
+        "title" : "Quản lý người dùng với redux",
+        "add" : "Thêm mới người dùng với Redux",
+        "password" : "Mật khẩu",
+        "firstname" : "Tên",
+        "lastname" : "Họ",
+        "phone" : "Số điện thoại",
+        "address" : "Địa chỉ",
+        "gender" : "Giới tính",
+        "position" : "Chức danh",
+        "role" : "Vai trò",
+        "image" : "Ảnh đại diện",
+        "save" : "Lưu"
+        
+    }
+    
+}
