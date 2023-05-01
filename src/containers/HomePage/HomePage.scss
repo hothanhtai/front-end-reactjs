@@ -17,6 +17,9 @@
     height: 30px !important;
 }
 
+.slick-disabled {
+    display: none !important;
+}
 
 .section-search{
    
@@ -60,7 +63,7 @@
     }
 
     &.home-footer{
-        height: 450px !important;
+        height: 550px !important;
     }
 
     &.footer-end{
@@ -101,7 +104,7 @@
                 }
 
                 &.outstanding-doctor{
-                    background-image: url('../../assets/doctor/104016-bs-nga.jpg');
+                    // background-image: url('../../assets/doctor/104016-bs-nga.jpg');
                     width: 120px;
                     height: 120px;
                     // margin: 0 auto;

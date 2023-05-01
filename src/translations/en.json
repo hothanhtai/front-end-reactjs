@@ -26,7 +26,9 @@
         "medical" : "Medical",
         "test" : "Test",
         "find-a-medical" : "Find a medical specialty",
-        "welcome" : "Welcome"
+        "welcome" : "Welcome",
+        "doctor-outstanding" : "Outstanding Doctor of the Week",
+        "see-more" : "See more"
     },
     "menu": {
         "admin" : {
@@ -56,7 +58,10 @@
         "position" : "Position",
         "role" : "Role",
         "image" : "Avatar",
-        "save" : "Save"
+        "save" : "Save",
+        "action" : "Action",
+        "edit" : "Update",
+        "cancel" : "Cancel"
     }
     
 }

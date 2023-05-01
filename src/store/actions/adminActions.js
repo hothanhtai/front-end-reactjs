@@ -1,6 +1,8 @@
 import actionTypes from './actionTypes';
-import { getAllCodeService, createNewUserService, getAllUsers } from '../../services/userService';
-import {toast} from 'react-toastify'
+import { getAllCodeService, createNewUserService, getAllUsers, deleteUserService, editUserService, getTopDoctorHomeService } from '../../services/userService';
+import {toast,cssTransition} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 export const fetchGenderStart = () => {
     return async (dispatch, getState) => {
@@ -83,36 +85,59 @@ export const fetchRoleStart = () => {
 export const createNewUser = (data) => {
     return async (dispatch, getState) => {
         try {
+           
             let res = await createNewUserService(data)
             if(res && res.message.errCode === 0){
-                toast.success(`${res.message.errMessage}`)
+                toast.success(`${res.message.errMessage}`,{
+                    icon: "♥️",
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                   
+                })
+                
                 dispatch(saveUserSuccess())  ;
                 dispatch(fetchAllUsersStart());
                 
             }else{
-                alert(res.message.errMessage)
-               dispatch(saveUserFailded());
+                toast.warn(`${res.message.errMessage}`,{
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                })
+            //    dispatch(saveUserFailded());
             }
        } catch (e) {
+        toast.warn(`${e}`)
             dispatch(saveUserFailded())
-            console.log('saveUserFailded error',e)
        }
     }
 }
 
 export const saveUserFailded = () => ({
-    type : 'CREATE_USER_FAILDED'
+    type : actionTypes.CREATE_USER_FAILDED
 })
 
 export const saveUserSuccess = () => ({
-    type : 'CREATE_USER_SUCCESS'
+    type : actionTypes.CREATE_USER_SUCCESS
 })
 
 export const fetchAllUsersStart = () => {
     return async (dispatch, getState) => {
         try {
             let res = await getAllUsers('ALL');
-            console.log('data from server:',res)
+            let res1 = await getTopDoctorHomeService(3)
+            console.log('data from server:',res1)
             if(res && res.errCode === 0){
                 dispatch(fetchAllUsersSuccess(res.users.reverse()))  
             }else{
@@ -127,10 +152,90 @@ export const fetchAllUsersStart = () => {
 }
 
 export const fetchAllUsersFailded = () => ({
-    type : 'FETCH_ALL_USERS_FAILDED'
+    type : actionTypes.FETCH_ALL_USERS_FAILDED
 })
 
 export const fetchAllUsersSuccess = (data) => ({
-    type : 'FETCH_ALL_USERS_SUCCESS',
+    type : actionTypes.FETCH_ALL_USERS_SUCCESS,
     users : data
 })
+
+export const deleteUser = (userId) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await deleteUserService(userId)
+            if(res && res.message.errCode === 0){
+                toast.success(`${res.message.errMessage}`)
+                dispatch(deleteUserSuccess())  ;
+                dispatch(fetchAllUsersStart());
+                
+            }else{
+                toast.warn(`${res.message.errMessage}`)
+               dispatch(deleteUserFailded());
+            }
+       } catch (e) {
+        toast.warn(`${e}`)
+            dispatch(deleteUserFailded())
+       }
+    }
+}
+
+export const deleteUserSuccess = () => ({
+    type : actionTypes.DELETE_USER_SUCCESS
+})
+
+export const deleteUserFailded = () => ({
+    type : actionTypes.DELETE_USER_FAILDED
+})
+
+export const editUser = (userId) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await editUserService(userId)
+            if(res && res.message.errCode === 0){
+                toast.success(`${res.message.errMessage}`)
+                dispatch(deleteUserSuccess())  ;
+                dispatch(fetchAllUsersStart());
+                
+            }else{
+                toast.warn(`${res.message.errMessage}`)
+               dispatch(deleteUserFailded());
+            }
+       } catch (e) {
+        toast.warn(`${e}`)
+            dispatch(deleteUserFailded())
+       }
+    }
+}
+
+export const editUserSuccess = () => ({
+    type : actionTypes.EDIT_USER_SUCCESS
+})
+
+export const editUserFailded = () => ({
+    type : actionTypes.EDIT_USER_FAILDED
+})
+
+export const fetchTopDoctor = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getTopDoctorHomeService('10');
+            if(res && res.errCode === 0){
+                dispatch({
+                    type : actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+                    dataDoctors : res.data
+                })
+            }else{
+                dispatch({
+                    type : actionTypes.FETCH_TOP_DOCTORS_FAILDED
+                })
+            } 
+                
+       } catch (e) {
+            console.log('FETCH_TOP_DOCTORS_FAILDED',e)
+            dispatch({
+                type : actionTypes.FETCH_TOP_DOCTORS_FAILDED
+            })
+       }
+    }
+}

@@ -27,6 +27,14 @@ class TableManageUser extends Component {
         }
     }
 
+    handleDeleteUser = (user) => {
+        this.props.deleteUserRedux(user.id)
+    }
+
+    handleEditUser = (user) => {
+       this.props.handleEditUserFromParent(user)
+    }
+
     render() {
         let listUsers = this.state.userRedux;
         console.log('check list user redux: ',listUsers)
@@ -36,10 +44,10 @@ class TableManageUser extends Component {
                         <tbody>
                             <tr>
                                 <th>Email</th>
-                                <th>FirstName</th>
-                                <th>LastName</th>
-                                <th>Address</th>
-                                <th>Action</th>
+                                <th><FormattedMessage id = "manage-user.firstname"/></th>
+                                <th><FormattedMessage id = "manage-user.lastname"/></th>
+                                <th><FormattedMessage id = "manage-user.address"/></th>
+                                <th><FormattedMessage id = "manage-user.action"/></th>
                             </tr>
                             {listUsers && listUsers.length > 0 &&
                                 listUsers.map((item, index) => {
@@ -50,8 +58,8 @@ class TableManageUser extends Component {
                                             <td>{item.lastName}</td>
                                             <td>{item.address}</td>
                                             <td>
-                                                <button className='btnEdit' ><i className="fas fa-pencil-alt"></i></button>
-                                                <button className='btnDelete' ><i className="fas fa-trash-alt"></i></button>
+                                                <button type='button' onClick={() => this.handleEditUser(item)} className='btnEdit' ><i className="fas fa-pencil-alt"></i></button>
+                                                <button type='button' onClick={() =>  this.handleDeleteUser(item)} className='btnDelete' ><i className="fas fa-trash-alt"></i></button>
                                             </td>
                                         </tr>
                                     )
@@ -73,7 +81,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchUsersRudux : () => dispatch(actions.fetchAllUsersStart())
+        fetchUsersRudux : () => dispatch(actions.fetchAllUsersStart()),
+        deleteUserRedux : (id) => dispatch(actions.deleteUser(id))
     };
 };
 
